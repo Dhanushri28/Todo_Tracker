@@ -262,8 +262,13 @@ def main():
     # Test 12: Delete task
     tester.test_delete_task(task2_id)
     
-    # Test 13: Verify task was deleted
-    tester.test_get_task_by_id(task2_id)  # Should return 404
+    # Test 13: Verify task was deleted (should return 404)
+    success, response = tester.run_test(
+        f"Verify Deleted Task - {task2_id}",
+        "GET",
+        f"tasks/{task2_id}",
+        404
+    )
     
     # Print final results
     print("\n" + "=" * 50)
