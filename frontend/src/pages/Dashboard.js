@@ -50,7 +50,7 @@ const Dashboard = () => {
       await dispatch(deleteTask(taskId)).unwrap();
       toast.success('Task deleted successfully');
     } catch (error) {
-      toast.error('Failed to delete task');
+      toast.error('o delete task');
     }
   };
 
