@@ -40,7 +40,7 @@ export const TaskModal = ({ isOpen, onClose, task, users }) => {
     try {
       const taskData = {
         ...data,
-        assignee_id: data.assignee_id || null,
+        assignee_id: data.assignee_id === 'unassigned' ? null : data.assignee_id || null,
         due_date: data.due_date || null,
       };
 
