@@ -21,7 +21,7 @@ export const TaskModal = ({ isOpen, onClose, task, users }) => {
       reset({
         title: task.title,
         description: task.description,
-        assignee_id: task.assignee_id || '',
+        assignee_id: task.assignee_id || 'unassigned',
         status: task.status,
         due_date: task.due_date || '',
       });
@@ -29,7 +29,7 @@ export const TaskModal = ({ isOpen, onClose, task, users }) => {
       reset({
         title: '',
         description: '',
-        assignee_id: '',
+        assignee_id: 'unassigned',
         status: 'todo',
         due_date: '',
       });
